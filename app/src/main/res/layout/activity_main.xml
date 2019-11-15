@@ -15,20 +15,21 @@
         android:textAppearance="?android:textAppearanceLarge" />
 
     <TextView
-        android:id="@+id/score_text_view"
+        android:id="@+id/team_a_score"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:padding="4dp"
-        android:text="3"
+        android:text="0"
         android:textAppearance="?android:textAppearanceLarge" />
 
     <Button
         android:id="@+id/three_points_button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:text="+3 Points" />
+        android:layout_marginBottom="9dp"
+        android:text="+3 Points"
+        android:onClick="setThree"/>
 
     <Button
         android:id="@+id/two_points_button"
@@ -36,7 +37,8 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
         android:padding="8dp"
-        android:text="+2 Points" />
+        android:text="+2 Points"
+        android:onClick="setTwo"/>
 
     <Button
         android:id="@+id/free_throw_button"
@@ -44,6 +46,7 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
         android:padding="8dp"
-        android:text="Free Throw" />
+        android:text="Free Throw"
+        android:onClick="setOne"/>
 
 </LinearLayout>
