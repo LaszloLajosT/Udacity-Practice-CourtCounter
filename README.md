@@ -11,3 +11,8 @@ Ok,  I have Team A and Team B with 3 Buttons now (Score 3, 2 and 1 point). Each 
 
 # Update v3: 16/11/2019
 Ok,  I have Team A and Team B with 3 Buttons now (Score 3, 2 and 1 point). Each time when I press any of these buttons I will increase the right Team  score points and show the score under the team name. Added some kind of style to my code plus I tried to implement ViewModel to fix a rotate bug.
+
+
+# Update v4: 22/04/2020
+Ok, I tried to use ViewModel to fix the landscape bug. Here is a screenshot about it... If somebody knows how to use ViewModel properly and stop this kind of mistake,please help me:) 
+<img src="screenshot.png" width="400" height="200" />
