@@ -14,6 +14,11 @@ Ok,  I have Team A and Team B with 3 Buttons now (Score 3, 2 and 1 point). Each 
 
 
 # Update v4: 22/04/2020
-Ok, I tried to use ViewModel to fix the landscape bug. I followed this  [article:](https://medium.com/androiddevelopers/viewmodels-a-simple-example-ed5ac416317e) Here is a screenshot about it... If somebody knows how to use ViewModel properly and stop this kind of mistake,please help me:) 
+Ok, I tried to use ViewModel to fix the landscape bug(Bug: The points are incorrect after phone rotation.) I followed this  [article:](https://medium.com/androiddevelopers/viewmodels-a-simple-example-ed5ac416317e)
+There is a bug when rotate the phone... The "reset" button is not in the right position.
+ Solution could be:
+- doesn't allow to rotate.
+- change the layout.
 
+Here is a screenshot about the bug.
 <img src="screenshot.png" width="400" height="200" />
