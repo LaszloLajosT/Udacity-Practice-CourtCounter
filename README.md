@@ -20,5 +20,6 @@ There is a bug when rotate the phone... The "reset" button is not in the right p
 - doesn't allow to rotate.
 - change the layout.
 
-Here is a screenshot about the bug.
+Here is a screenshot about the bug:
+
 <img src="screenshot.png" width="400" height="200" />
