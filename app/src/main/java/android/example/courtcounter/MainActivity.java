@@ -17,8 +17,8 @@ public class MainActivity extends AppCompatActivity {
 
         mViewModel = ViewModelProviders.of(this).get(ScoreViewModel.class);
         // Other setup code below...
-        displayForTeamA(mViewModel.scoreTeamA);
-        displayForTeamB(mViewModel.scoreTeamB);
+        displayForTeamA(mViewModel.getScoreTeamA());
+        displayForTeamB(mViewModel.getScoreTeamB());
     }
 
     //Displays the given score for Team A.
@@ -35,48 +35,47 @@ public class MainActivity extends AppCompatActivity {
 
     // Increase Team A score by 3
     public void addThreeForTeamA(View view) {
-        mViewModel.scoreTeamA = mViewModel.scoreTeamA + 3;
-        displayForTeamA(mViewModel.scoreTeamA);
+        mViewModel.setScoreTeamA(mViewModel.getScoreTeamA()+3);
+        displayForTeamA(mViewModel.getScoreTeamA());
     }
 
     //Increase Team A score by 2
     public void addTwoForTeamA(View view) {
-        mViewModel.scoreTeamA = mViewModel.scoreTeamA + 2;
-        displayForTeamA(mViewModel.scoreTeamA);
+        mViewModel.setScoreTeamA(mViewModel.getScoreTeamA()+2);
+        displayForTeamA(mViewModel.getScoreTeamA());
     }
 
     //Increase Team A score by 1
     public void addOneForTeamA(View v) {
-        mViewModel.scoreTeamA = mViewModel.scoreTeamA + 1;
-        displayForTeamA(mViewModel.scoreTeamA);
+        mViewModel.setScoreTeamA(mViewModel.getScoreTeamA()+1);
+        displayForTeamA(mViewModel.getScoreTeamA());
     }
 
 
 
     //Increase Team B score by 3
     public void addThreeForTeamB(View view) {
-        mViewModel.scoreTeamB = mViewModel.scoreTeamB + 3;
-        displayForTeamB(mViewModel.scoreTeamB);
+        mViewModel.setScoreTeamB(mViewModel.getScoreTeamB()+3);
+        displayForTeamB(mViewModel.getScoreTeamB());
     }
 
     // Increase Team B score by 2
     public void addTwoForTeamB(View view) {
-        mViewModel.scoreTeamB = mViewModel.scoreTeamB + 2;
-        displayForTeamB(mViewModel.scoreTeamB);
+        mViewModel.setScoreTeamB(mViewModel.getScoreTeamB()+2);
+        displayForTeamB(mViewModel.getScoreTeamB());
     }
 
     //Increase Team B score by 1
     public void addOneForTeamB(View view) {
-        mViewModel.scoreTeamB = mViewModel.scoreTeamB + 1;
-        displayForTeamB(mViewModel.scoreTeamB);
+        mViewModel.setScoreTeamB(mViewModel.getScoreTeamB()+1);
+        displayForTeamB(mViewModel.getScoreTeamB());
     }
 
     //Reset both Team score points
     public void resetScore(View v){
-        mViewModel.scoreTeamA = 0;
-        mViewModel.scoreTeamB = 0;
-        displayForTeamA(mViewModel.scoreTeamA);
-        displayForTeamB(mViewModel.scoreTeamB);
+        mViewModel.setScoreTeamA(0);
+        mViewModel.setScoreTeamB(0);
+        displayForTeamA(mViewModel.getScoreTeamA());
+        displayForTeamB(mViewModel.getScoreTeamB());
     }
-
 }
