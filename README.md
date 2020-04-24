@@ -22,4 +22,10 @@ There is a bug when rotate the phone... The "reset" button is not in the right p
 
 Here is a screenshot about the bug:
 
-<img src="screenshot.png" width="400" height="200" />
+<img src="screenshots/bug.png" width="552" height="394" />
+
+# Update v5: 24/04/2020
+Right, so I implemented ViewModel and the layout also looks ok when I rotate my phone.
+Portrait             |  Landscape
+:-------------------------:|:-------------------------:
+<img src="screenshots/screenshot2.png" width="394" height="552" />| <img src="screenshots/screenshot1.png" width="552" height="394" />
