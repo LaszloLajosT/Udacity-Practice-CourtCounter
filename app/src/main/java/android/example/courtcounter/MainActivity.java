@@ -5,7 +5,7 @@ import android.view.View;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.lifecycle.ViewModelProviders;
+import androidx.lifecycle.ViewModelProvider;
 
 public class MainActivity extends AppCompatActivity {
     ScoreViewModel mViewModel;
@@ -15,40 +15,40 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        mViewModel = ViewModelProviders.of(this).get(ScoreViewModel.class);
+        mViewModel = new ViewModelProvider(this).get(ScoreViewModel.class);
         // Other setup code below...
-        displayForTeamA(mViewModel.getScoreTeamA());
-        displayForTeamB(mViewModel.getScoreTeamB());
+        displayForTeamA();
+        displayForTeamB();
     }
 
     //Displays the given score for Team A.
-    public void displayForTeamA(int score) {
+    public void displayForTeamA() {
         TextView scoreView = findViewById(R.id.team_a_score);
-        scoreView.setText(String.valueOf(score));
+        scoreView.setText(String.valueOf(mViewModel.getScoreTeamA()));
     }
 
     //Displays the given score for Team B.
-    public void displayForTeamB(int score) {
+    public void displayForTeamB() {
         TextView scoreView = findViewById(R.id.team_b_score);
-        scoreView.setText(String.valueOf(score));
+        scoreView.setText(String.valueOf(mViewModel.getScoreTeamB()));
     }
 
     // Increase Team A score by 3
     public void addThreeForTeamA(View view) {
         mViewModel.setScoreTeamA(mViewModel.getScoreTeamA()+3);
-        displayForTeamA(mViewModel.getScoreTeamA());
+        displayForTeamA();
     }
 
     //Increase Team A score by 2
     public void addTwoForTeamA(View view) {
         mViewModel.setScoreTeamA(mViewModel.getScoreTeamA()+2);
-        displayForTeamA(mViewModel.getScoreTeamA());
+        displayForTeamA();
     }
 
     //Increase Team A score by 1
     public void addOneForTeamA(View v) {
         mViewModel.setScoreTeamA(mViewModel.getScoreTeamA()+1);
-        displayForTeamA(mViewModel.getScoreTeamA());
+        displayForTeamA();
     }
 
 
@@ -56,26 +56,26 @@ public class MainActivity extends AppCompatActivity {
     //Increase Team B score by 3
     public void addThreeForTeamB(View view) {
         mViewModel.setScoreTeamB(mViewModel.getScoreTeamB()+3);
-        displayForTeamB(mViewModel.getScoreTeamB());
+        displayForTeamB();
     }
 
     // Increase Team B score by 2
     public void addTwoForTeamB(View view) {
         mViewModel.setScoreTeamB(mViewModel.getScoreTeamB()+2);
-        displayForTeamB(mViewModel.getScoreTeamB());
+        displayForTeamB();
     }
 
     //Increase Team B score by 1
     public void addOneForTeamB(View view) {
         mViewModel.setScoreTeamB(mViewModel.getScoreTeamB()+1);
-        displayForTeamB(mViewModel.getScoreTeamB());
+        displayForTeamB();
     }
 
     //Reset both Team score points
     public void resetScore(View v){
         mViewModel.setScoreTeamA(0);
         mViewModel.setScoreTeamB(0);
-        displayForTeamA(mViewModel.getScoreTeamA());
-        displayForTeamB(mViewModel.getScoreTeamB());
+        displayForTeamA();
+        displayForTeamB();
     }
 }
